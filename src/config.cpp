@@ -10,8 +10,8 @@ utf8_int8_t save_path[MAX_INPUT_LENGTH];
 utf8_int8_t path_buffer[MAX_INPUT_LENGTH];
 utf8_int8_t filter_buffer[MAX_INPUT_LENGTH];
 utf8_int8_t query_buffer[MAX_INPUT_LENGTH];
-uint16_t ts_thread_count = 4;
-uint32_t max_file_size = 100; // in MBs
+int32_t ts_thread_count = 4;
+int32_t max_file_size = 100; // in MBs
 bool respect_capitalization = false;
 
 static void _ts_config_ReadLine(ImGuiContext*, ImGuiSettingsHandler*, void* entry, const utf8_int8_t* line)

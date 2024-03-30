@@ -56,10 +56,10 @@ static void _ts_create_popups(int window_w, int window_h) {
 	// Settings window
 	if (ImGui::BeginPopupModal("Text-Search settings", &open_settings_window, ImGuiWindowFlags_NoResize|ImGuiWindowFlags_NoMove)) {
 		ImGui::SetWindowSize({300, 0});
-		ImGui::DragInt("Threads", (int*)&ts_thread_count, 0.1f, 1, 8);
+		ImGui::DragInt("Threads", &ts_thread_count, 0.1f, 1, 8);
 		ImGui::SetItemTooltip("Number of threads used to search for text matches");
 
-		ImGui::DragInt("File Size", (int*)&max_file_size, 50.0f, 1, 10000, "%dMB");
+		ImGui::DragInt("File Size", &max_file_size, 50.0f, 1, 10000, "%dMB");
 		ImGui::SetItemTooltip("Files larger than this will not be searched");
 
 		ImGui::Dummy({0, 70});
